@@ -1,0 +1,20 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "HWR Scheduling",
+  "version": "1.0",
+
+  // Recommended
+  "description": "script to open the schedule",
+  "icons": {"32": "icon32.png"},
+  "page_action": {
+          "default_icon": {                    // optional
+            "32": "icon32.png"            // optional
+          }
+   },
+   "content_scripts": [
+    {
+        "matches": ["https://moodle.hwr-berlin.de/fb2-stundenplan/stundenplan.php"],
+        "js": ["index.js"]
+    }]
+}
